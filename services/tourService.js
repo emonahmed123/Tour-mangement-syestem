@@ -18,14 +18,36 @@ exports.creatServiceTour= async(data)=>{
 }
 
 
-exports.getServiceTourByid=async(id,data)=>{
+exports.getServiceTourByid=async(id)=>{
      
-    const result =await Tour.findByIdAndUpdate(id , { $inc: { views: 1 } },
+    const result =await Tour.findByIdAndUpdate(id , { $inc: { veiws: 1 } },
         { new: true });
      return result
 
 }
 
 
+exports.UpdateTourServiceById=async(id,data)=>{
+  
+    const result =await Tour.updateOne({_id:id},{$set:data},{runValidators:true})
+     
+        return result
+}
 
+
+exports.getTendingServiceTour=async(data)=>{
+    const result =await Tour.find({})
+    .limit(data||3)
+    .sort({veiws:-1, name:1})
+
+    return result
+}
+
+exports.getCheapestServiceTour=async(data)=>{
+    const result =await Tour.find({})
+    .limit(data||3)
+    .sort({price:1,name:1})
+    
+    return result
+}
 

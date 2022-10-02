@@ -27,7 +27,7 @@ const tourSchema = mongoose.Schema({
            require:[true,"location true"]
       },
      
-      views: {
+      veiws: {
         type: Number,
         min: [0, "Views can't be less than 0"],
         required: true,
