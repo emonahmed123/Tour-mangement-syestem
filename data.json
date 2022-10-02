@@ -1,0 +1,52 @@
+[
+{
+    "name":"Nav Tour",
+    "price":300,
+    "location":"Sylet",
+    "veiws":1,
+     "image":"png1"
+
+},
+{
+    "name":"jumona Park Tour",
+    "price":350,
+    "location":"Dhaka",
+    "veiws":3,
+     "image":"png2"
+
+},
+{
+    "name":"soikot Tour",
+    "price":1100,
+    "location":"Chottrogram",
+    "veiws":4,
+     "image":"png1"
+
+},
+{
+    "name":"Forest Tour",
+    "price":500,
+    "location":"Sonderbon",
+    "veiws":1,
+     "image":"png1"
+
+},
+{
+    "name":"River Tour",
+    "price":600,
+    "location":"Tangail",
+    "veiws":5,
+     "image":"png1"
+
+},
+{
+    "name":"boat  Tour",
+    "price":300,
+    "location":"basail",
+    "veiws":8,
+    "image":"png1"
+
+}
+
+
+]

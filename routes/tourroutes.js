@@ -4,8 +4,8 @@ const toursControllers=require('../Controller/tourController')
 
 router.route('/')
 .get(toursControllers.getTours)
-.post()
-
-
+.post(toursControllers.CreatTours)
+router.route("/:id")
+.get(toursControllers.getTourById)
 
 module.exports=router;

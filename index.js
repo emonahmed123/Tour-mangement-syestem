@@ -11,7 +11,10 @@ const tourRoutes=require('./routes/tourroutes')
 
 app.use(express.json())
 app.use(cors())
-
+ // database connection
+mongoose.connect(process.env.LOCAL_DATABASE).then(()=>{
+    console.log(`database coonction is successfull`)
+})
 
 
 app.use('/api/v1/tours',tourRoutes)
