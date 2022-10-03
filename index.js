@@ -15,9 +15,11 @@ app.use(cors())
 
 // database connection
 
-mongoose.connect(process.env.LOCAL_DATABASE).then(() => {
+mongoose.connect(process.env.LOCAL_DATABASE)
+.then(() => {
   console.log(`database coonction is successfull`)
 })
+.catch((error) => console.log(error));
 
 
 app.use('/api/v1/tours', tourRoutes)
