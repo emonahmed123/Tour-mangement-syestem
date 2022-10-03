@@ -6,5 +6,26 @@
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.3",
     "nodemon": "^2.0.20"
-  }
+  },
+  "name": "tour-mangement-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js",
+    "start-dev":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emonahmed123/Tour-mangement-syestem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emonahmed123/Tour-mangement-syestem/issues"
+  },
+  "homepage": "https://github.com/emonahmed123/Tour-mangement-syestem#readme",
+  "description": ""
 }

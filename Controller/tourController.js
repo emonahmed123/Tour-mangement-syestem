@@ -1,9 +1,9 @@
 const { creatServiceTour, getserviceTour, getServiceTourByid, getCheapestServiceTour, UpdateTourServiceById, getTendingServiceTour } = require("../services/tourService")
-const { query } = require('express');
+// const { query } = require('express');
 exports.getTours = async (req, res, next) => {
 
    try {
-      console.log(req.query)
+     
       let filters = { ...req.query};
     
 
