@@ -15,7 +15,7 @@ const port = process.env.PORT||5000
 
 // database connection
 
-mongoose.connect(process.env.LOCAL_DATABASE)
+mongoose.connect('mongodb://localhost:27017/tour-mangement')
 .then(() => {
   console.log(`database coonction is successfull`)
 })

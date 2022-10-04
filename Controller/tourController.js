@@ -5,7 +5,7 @@ exports.getTours = async (req, res, next) => {
    try {
      
       let filters = { ...req.query};
-    
+      const queries = {};
 
       const excludeFields = ['sort', 'page', 'limit']
       excludeFields.forEach(field => delete filters[field])
@@ -17,7 +17,7 @@ exports.getTours = async (req, res, next) => {
       console.log(filtersString)
       filters=  JSON.parse(filtersString)
 
-      const queries = {};
+    
 
       if (req.query.sort) {
          const sortBy = req.query.sort.split(',').join(' ')
@@ -28,6 +28,16 @@ exports.getTours = async (req, res, next) => {
          const fields = req.query.fields.split(',').join(' ')
          queries.fields = fields
       }
+
+      if(req.query.page){
+     const {page=1,limit=3}= req.query;
+    const skip=(page-1)*parseInt(limit)
+    queries.skip=skip
+    queries.limit=parseInt(limit)     
+
+       }
+
+
 
       const Tour = await getserviceTour(filters, queries)
 

@@ -5,10 +5,13 @@ const Tour = require('../models/tour');
 
 exports.getserviceTour = async (filters, queries) => {
     const result = await Tour.find(filters)
+        .skip(queries.skip)
+        .limit(queries.limit)
         .select(queries.fields)
         .sort(queries.sortBy)
-
-    return result
+   const  totalTour= await Tour.countDocuments(filters);
+   const pageCount =Math.ceil(totalTour/queries.limit)
+    return {result,totalTour,pageCount}
 }
 
 
