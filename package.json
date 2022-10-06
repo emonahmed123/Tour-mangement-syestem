@@ -1,12 +1,4 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.1",
-    "mongodb": "^4.10.0",
-    "mongoose": "^6.6.3",
-    "nodemon": "^2.0.20"
-  },
   "name": "tour-mangement-system",
   "version": "1.0.0",
   "main": "index.js",
@@ -16,6 +8,15 @@
     "start-dev":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.3",
+    "nodemon": "^2.0.20"
+  },
+ 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emonahmed123/Tour-mangement-syestem.git"
